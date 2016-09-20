@@ -1,0 +1,20 @@
+{
+  "name": "jsgui2-data-object",
+  "main": "data-object.js",
+  "license": "MIT",
+  "engines": { "node" : ">=6.5.0" },
+  "description": "jsgui2 ES6 class that represents an object, but with further functionality than JavaScript provides as standard.",
+  "author": "James Vickers <james@metabench.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/metabench/jsgui2-data-object.git"
+  },
+  "version": "0.0.3",
+  "dependencies" : {
+    "jsgui2-essentials": ">= 0.0.1",
+    "jsgui2-data-value": ">= 0.0.1",
+    "jsgui2-evented-class": ">= 0.0.1",
+    "jsgui2-collection": ">= 0.0.1"
+  }
+
+}
