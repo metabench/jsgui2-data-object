@@ -9,12 +9,11 @@
     "type": "git",
     "url": "https://github.com/metabench/jsgui2-data-object.git"
   },
-  "version": "0.0.3",
+  "version": "0.0.4",
   "dependencies" : {
     "jsgui2-essentials": ">= 0.0.1",
     "jsgui2-data-value": ">= 0.0.1",
-    "jsgui2-evented-class": ">= 0.0.1",
-    "jsgui2-collection": ">= 0.0.1"
+    "jsgui2-evented-class": ">= 0.0.1"
   }
 
 }

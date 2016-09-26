@@ -1,12 +1,10 @@
-
 var jsgui = require('jsgui2-essentials');
 var Evented_Class = require('jsgui2-evented-class');
 //var Data_Structures = require('./jsgui-data-structures');
 var Data_Value = require('jsgui2-data-value');
-
 var Constraint = require('./constraint');
 var Fields_Collection = require('./fields-collection');
-var Collection = require('jsgui2-collection');
+//var Collection = require('jsgui2-collection');
 
 var j = jsgui;
 var Class = j.Class;
@@ -52,7 +50,7 @@ var native_constructor_tof = jsgui.native_constructor_tof;
 var value_as_field_constraint = Constraint.value_as_field_constraint;
 
 //var Ordered_String_List = Data_Structures.Ordered_String_List;
-var Ordered_String_List =require('jsgui2-ordered-string-list');
+var Ordered_String_List = require('jsgui2-ordered-string-list');
 
 class Mini_Context{
 
@@ -113,6 +111,7 @@ var is_js_native = function(obj) {
 
 class Data_Object extends Evented_Class {
     'constructor'(spec) {
+        super(spec);
 
         this.__data_object = true;
 
@@ -1070,10 +1069,21 @@ class Data_Object extends Evented_Class {
 
                             if (field_type_name === 'collection') {
                                 //console.log('lazy loading - creating new collection');
+
+                                throw 'stop';
+
+                                // Use a jsgui factory
+
+                                /*
+
                                 this._[field_name] = new jsgui.Collection({
                                     'context': this.context
                                 });
                                 return this._[field_name];
+                                */
+
+
+
                             } else {
                                 // if it's just a string?
 
@@ -1774,5 +1784,7 @@ Data_Object.chained_fields_to_fields_list = chained_fields_to_fields_list;
 Data_Object.Mini_Context = Mini_Context;
 Data_Object.set_Enhanced_Data_Object = set_Enhanced_Data_Object;
 Data_Object.get_Enhanced_Data_Object = get_Enhanced_Data_Object;
+
+console.log('1. Data_Object');
 
 module.exports = Data_Object;
